@@ -4,8 +4,7 @@ from engine.theme import THEMES
 from engine.parser import parse_input
 from engine.renderer import (
     render_ranked_bar,
-    render_holo_bar,
-    render_pie
+    render_holo_bar
 )
 
 st.set_page_config(page_title="Visual Engine", layout="centered")
@@ -18,8 +17,7 @@ values = st.text_area("Values (one per line)")
 
 chart_type = st.selectbox("Chart Type", [
     "Ranked Bar",
-    "Holo Bar",
-    "Pie Chart"
+    "Holo Bar"
 ])
 
 sort_mode = st.selectbox("Sort Mode", [
@@ -42,15 +40,10 @@ if st.button("Generate"):
             img = render_ranked_bar(
                 data, theme, title, footer, author, sort_mode
             )
-
-        elif chart_type == "Holo Bar":
+            
+        else:
             img = render_holo_bar(
                 data, theme, title, footer, author, sort_mode
-            )
-
-        else:
-            img = render_pie(
-                data, theme, title, footer, author
             )
 
         st.image(img, use_container_width=True)
