@@ -1,8 +1,8 @@
 # Visual Engine
 
-> Paste your numbers, get a publication-ready chart.
+> Paste your values & numbers.
 
-**Live app:** https://visual-engine.streamlit.app/
+**[View the Live Application Here](https://visual-engine.streamlit.app/)**
 
 ---
 
